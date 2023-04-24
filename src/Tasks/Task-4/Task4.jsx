@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 // useFetch is a custom hook which can be used to make API calls by providing the URL.
-const useFetch = (url) => {
+export const useFetch = (url) => {
   const [data, setData] = useState(null);
   useEffect(() => {
     fetch(url)
@@ -15,7 +15,7 @@ const useFetch = (url) => {
 };
 const Task4 = () => {
   const data = useFetch("https://dummyjson.com/todos?limit=6");
-  const todos = data.todos;
+  const todos = data ? data.todos : [];
   return (
     <div className="flex flex-col items-center gap-3 h-screen py-24">
       <div className="min-w-[300px] w-[450px] flex flex-col items-center justify-center">
@@ -39,8 +39,8 @@ const Task4 = () => {
           </h1>
           <ul>
             {todos.map((tod) => {
-              const { todo } = tod;
-              return <li>&rarr; {todo}</li>;
+              const { id, todo } = tod;
+              return <li key={id}>&rarr; {todo}</li>;
             })}
           </ul>
         </div>
