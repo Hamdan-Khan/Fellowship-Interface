@@ -2,7 +2,7 @@ import React from "react";
 
 const Task1 = () => {
   return (
-    <div className="flex flex-col items-center h-screen">
+    <div className="flex flex-col items-center h-screen py-24">
       <h1 className="text-2xl font-bold">Routing in React</h1>
       <h1 className="text-lg">
         The Routing of this interface is built using React-Router-DOM. Navigate
