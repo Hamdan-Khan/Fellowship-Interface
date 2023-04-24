@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 import Task2 from "./Tasks/Task-2/Task2";
 import Tasks from "./Pages/Tasks";
 import Navbar from "./components/Navbar";
+import Task3 from "./Tasks/Task-3/Task3";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/tasks/task-1" element={<Task1 />} />
         <Route path="/tasks/task-2" element={<Task2 />} />
-        <Route path="/tasks/task-3" element={<Task1 />} />
+        <Route path="/tasks/task-3" element={<Task3 />} />
         <Route path="/tasks/task-4" element={<Task1 />} />
       </Routes>
     </div>

@@ -41,6 +41,16 @@ const Task2 = () => {
           Increase Count
         </button>
       </div>
+      <footer>
+        Link to Code :{" "}
+        <a
+          href="https://github.com/Hamdan-Khan/Fellowship-Interface/blob/master/src/Tasks/Task-2/Task2.jsx"
+          target="_blank"
+          className="font-semibold underline"
+        >
+          Click here
+        </a>
+      </footer>
     </div>
   );
 };
