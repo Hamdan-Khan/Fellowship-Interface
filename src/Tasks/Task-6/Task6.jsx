@@ -35,7 +35,12 @@ const Task6 = () => {
   return (
     <Section>
       <Heading>STYLING DONE BY STYLED COMPONENTS</Heading>
-      <Button href="">View source code</Button>
+      <Button
+        href="https://github.com/Hamdan-Khan/Fellowship-Interface/tree/master/src/Tasks/Task-6"
+        target="_blank"
+      >
+        View source code
+      </Button>
     </Section>
   );
 };

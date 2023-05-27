@@ -10,7 +10,8 @@ const Task7 = () => {
         </p>
         <p>This whole Tasks interface is styled using Tailwind CSS</p>
         <a
-          href=""
+          target="_blank"
+          href="https://github.com/Hamdan-Khan/Fellowship-Interface/tree/master/src/Tasks/Task-7"
           className="border border-black px-3 py-1 font-semibold bg-black text-white rounded-sm mt-3"
         >
           View Source Code
