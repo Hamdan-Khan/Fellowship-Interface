@@ -45,27 +45,29 @@ const Task11 = () => {
           Submit
         </button>
       </form>
-      <div className="border p-4 w-[550px]">
-        <h1 className="text-2xl font-bold">Details:</h1>
-        <h4 className="text-md font-semibold my-1">
-          Name:{"  "}
-          <span className="underline font-normal">
-            {details.name ? details.name : ""}
-          </span>
-        </h4>
-        <h4 className="text-md font-semibold my-1">
-          Age:{"  "}
-          <span className="underline font-normal">
-            {details.age ? details.age : ""}
-          </span>
-        </h4>
-        <h4 className="text-md font-semibold my-1">
-          City:{"  "}
-          <span className="underline font-normal">
-            {details.city ? details.city : ""}
-          </span>
-        </h4>
-      </div>
+      {(details.name || details.age || details.city) && (
+        <div className="border p-4 w-[550px]">
+          <h1 className="text-2xl font-bold">Details:</h1>
+          <h4 className="text-md font-semibold my-1">
+            Name:{"  "}
+            <span className="underline font-normal">
+              {details.name ? details.name : ""}
+            </span>
+          </h4>
+          <h4 className="text-md font-semibold my-1">
+            Age:{"  "}
+            <span className="underline font-normal">
+              {details.age ? details.age : ""}
+            </span>
+          </h4>
+          <h4 className="text-md font-semibold my-1">
+            City:{"  "}
+            <span className="underline font-normal">
+              {details.city ? details.city : ""}
+            </span>
+          </h4>
+        </div>
+      )}
     </div>
   );
 };

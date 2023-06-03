@@ -68,6 +68,11 @@ const Tasks = () => {
             &#8658; <span className="underline">Forms in React</span>
           </Link>
         </li>
+        <li>
+          <Link to="/tasks/task-12">
+            &#8658; <span className="underline">Forms Validation</span>
+          </Link>
+        </li>
       </ul>
     </div>
   );
