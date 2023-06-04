@@ -1,45 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 
 const Task13 = () => {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
-  const [city, setCity] = useState("");
   const [details, setDetails] = useState({});
-  const submitHandler = (e) => {
-    e.preventDefault();
-    setDetails({ name, age, city });
-    console.log(details);
-    setName("");
-    setCity("");
-    setAge("");
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (data) => {
+    setDetails(data);
+    reset();
   };
+
   return (
     <div className="flex flex-col justify-center items-center">
-      <form className="flex flex-col w-[550px] gap-3 p-6">
-        <h1 className="text-3xl font-bold">React Form</h1>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-col w-[550px] gap-3 p-6"
+      >
+        <h1 className="text-3xl font-bold">React Hook Form</h1>
         <input
           type="text"
           className="focus:outline-none border border-zinc-400 px-3 py-1 rounded-md"
-          value={name}
+          {...register("name")}
           placeholder="Name"
-          onChange={(e) => setName(e.target.value)}
         />
         <input
           type="number"
           className="focus:outline-none border border-zinc-400 px-3 py-1 rounded-md"
-          value={age}
+          {...register("age")}
           placeholder="Age"
-          onChange={(e) => setAge(e.target.value)}
         />
         <input
           type="text"
           className="focus:outline-none border border-zinc-400 px-3 py-1 rounded-md"
-          value={city}
+          {...register("city")}
           placeholder="City"
-          onChange={(e) => setCity(e.target.value)}
         />
         <button
-          onClick={submitHandler}
+          type="submit"
           className="bg-black px-4 py-1 font-semibold text-white rounded-md"
         >
           Submit

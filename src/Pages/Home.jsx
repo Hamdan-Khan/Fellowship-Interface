@@ -7,7 +7,16 @@ const Home = () => {
       <h1 className="text-8xl font-bold text-center">
         Fellowship Tasks Interface.
       </h1>
-      <p className="text-zinc-500">Made by Hamdan</p>
+      <p className="text-zinc-500">
+        Made by{" "}
+        <a
+          className="inline hover:underline font-semibold text-zinc-600"
+          href="https://hamdan-k.me"
+          target="_blank"
+        >
+          Hamdan
+        </a>
+      </p>
       <div>
         <Link
           to={"/tasks"}
