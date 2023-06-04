@@ -30,7 +30,7 @@ function App() {
 
 function TaskWrapper({ taskNum, taskLink }) {
   const TaskComponent = React.lazy(() =>
-    import(`./Tasks/Task-${taskNum}/Task${taskNum}`)
+    import(`./Tasks/Task-${taskNum}/Task${taskNum}.jsx`)
   );
 
   return (
