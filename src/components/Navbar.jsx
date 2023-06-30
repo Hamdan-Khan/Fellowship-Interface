@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
-      <ul className="flex flex-row justify-evenly text-3xl bg-zinc-800 font-semibold text-white py-3">
+      <ul className="flex flex-row justify-evenly text-2xl sm:text-3xl bg-zinc-800 font-semibold text-white py-3">
         <li className="hover:text-zinc-200">
           <Link to={-1}>&#x2190; Back</Link>
         </li>

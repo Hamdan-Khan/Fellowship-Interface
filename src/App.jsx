@@ -17,9 +17,7 @@ function App() {
             <Route
               key={task.link}
               path={`/tasks/${task.link}`}
-              element={
-                <TaskWrapper taskNum={task.taskNum} taskLink={task.link} />
-              }
+              element={<TaskWrapper taskNum={task.taskNum} />}
             />
           ))}
         </>
@@ -28,7 +26,7 @@ function App() {
   );
 }
 
-function TaskWrapper({ taskNum, taskLink }) {
+function TaskWrapper({ taskNum }) {
   const TaskComponent = React.lazy(() =>
     import(`./Tasks/Task-${taskNum}/Task${taskNum}.jsx`)
   );
@@ -39,7 +37,9 @@ function TaskWrapper({ taskNum, taskLink }) {
         <div className="text-center font-bold text-3xl mt-5">Loading...</div>
       }
     >
-      <TaskComponent />
+      <div className="px-4">
+        <TaskComponent />
+      </div>
     </Suspense>
   );
 }
